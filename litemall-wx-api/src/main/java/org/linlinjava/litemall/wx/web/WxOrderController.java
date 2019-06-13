@@ -104,6 +104,11 @@ public class WxOrderController {
     public Object payNotify(HttpServletRequest request, HttpServletResponse response) {
         return wxOrderService.payNotify(request, response);
     }
+    
+    @PostMapping("simulate-pay-notify")
+    public Object simulatePayNotify(@RequestBody String body) {
+    	return wxOrderService.simulatePayNotify(body);
+    }
 
     /**
      * 订单申请退款
